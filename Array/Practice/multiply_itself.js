@@ -9,7 +9,6 @@ const multiply_itself=(nums)=>{
         nums[i]=total/nums[i];
     }
     return nums;
-    
 }
 
 let nums=[-1,1,0,-3,3];
