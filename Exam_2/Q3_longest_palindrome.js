@@ -1,36 +1,31 @@
 const checkPalindrome = (str) => {
-    let i = 0;
-    let j = str.length - 1;
-    while (i < j) {
-      if (str[i] !== str[j]) {
-        return false;
-      }
-      i++;
-      j--;
+  let i = 0;
+  let j = str.length - 1;
+  while (i < j) {
+    if (str[i] !== str[j]) {
+      return false;
     }
-    return true;
+    i++;
+    j--;
   }
-  
-  const find_Largest_Palindrome = (str,k) =>{
-    let maxPalindrome = "";
-   
-    for (let i = 0; i <= str.length - k; i++) {
-      for (let j = i+k; j <= str.length; j++) {
-        let substring = str.substring(i, j);
-        // console.log(substring);
-        
-            if (checkPalindrome(substring)) {
-                if (substring.length > maxPalindrome.length) {
-                    maxPalindrome = substring;
-                }
-            }
+  return true;
+}
+
+let str = "babad";
+let k = 3;
+let arr = [...str];
+
+for (let i = 0; i < arr.length; i++) {
+  let substring = [];
+  for (let j = i; j < arr.length; j++) {
+    substring.push(arr[j]);
+    
+    if (checkPalindrome(substring)) {
+      if (substring.length >= k) {
+        console.log(substring);
+      }else{
+        flag=true;
       }
     }
-  
-    return maxPalindrome;
   }
-  
-  const str = "babad";
-  let k = 3;
-  const largestPalindrome = find_Largest_Palindrome(str,k);
-  console.log(largestPalindrome); 
+}

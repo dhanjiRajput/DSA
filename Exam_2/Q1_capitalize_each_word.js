@@ -1,13 +1,9 @@
-let string = "the quick Brown fox jumps over The lazy dog";
-let words = string.split(" ");
-const capital = (word) =>{
-  return word.charAt(0).toUpperCase() + word.slice(1);
+
+const mySentence = "the quick Brown fox jumps over The lazy dog";
+const words = mySentence.split(" ");
+
+for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].substring(1);
 }
 
-
-
-let JoinStringCapital = words.map(capital);
-
-let result = JoinStringCapital.join(" ");
-
-console.log("Result:", result);
+console.log(words.join(" "));
