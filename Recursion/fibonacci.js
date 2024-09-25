@@ -9,4 +9,3 @@ const fibo=(n)=>{
 }
 
 console.log(fibo(10));
-
