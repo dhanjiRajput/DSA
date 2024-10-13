@@ -52,13 +52,13 @@ class Stack {
         console.log(arr);
     }
 
-    inserttAtBottm(stack,val){
+    inserttAtBottom(stack,val){
        if(isEmpty()) {
             stack.push(val);
        }
 
        let top=stack.pop()
-       inserttAtBottm(stack,val)
+       inserttAtBottom(stack,val)
        stack.push(top);
     }
 
